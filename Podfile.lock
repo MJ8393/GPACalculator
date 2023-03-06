@@ -1,20 +1,24 @@
 PODS:
   - SnapKit (5.6.0)
+  - SwiftyShadow (1.7.0)
   - SwipeCellKit (2.7.1)
 
 DEPENDENCIES:
   - SnapKit (~> 5.6.0)
+  - SwiftyShadow (~> 1.7.0)
   - SwipeCellKit
 
 SPEC REPOS:
   trunk:
     - SnapKit
+    - SwiftyShadow
     - SwipeCellKit
 
 SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftyShadow: d2697c62eb83759b7806466e3ea29de24c772c29
   SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
 
-PODFILE CHECKSUM: 185976b2e8321d527b14022e94500dabd8146a29
+PODFILE CHECKSUM: e10a9f206de3552e2a5be501d43d81befa2afa19
 
 COCOAPODS: 1.11.3

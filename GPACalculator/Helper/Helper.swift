@@ -19,4 +19,20 @@ struct UIHelper {
         flowLayout.itemSize = CGSize(width: itemWith, height: 50)
         return flowLayout
     }
+    
+    static func createTreeCoulumbFlowLayout(in view: UIView) -> UICollectionViewFlowLayout {
+        let width = view.bounds.width - 40
+        let padding: CGFloat = 0
+        let minumumItemSpacing: CGFloat = 1
+        let availableWidth = width - (padding * 2) - (minumumItemSpacing * 2)
+        let itemWidth = availableWidth / 3
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+        flowLayout.itemSize = CGSize(width: itemWidth, height: 50)
+        flowLayout.minimumLineSpacing = 1
+        flowLayout.minimumInteritemSpacing = 1
+        return flowLayout
+    }
+    
 }

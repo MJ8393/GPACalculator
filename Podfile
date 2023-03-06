@@ -8,5 +8,5 @@ target 'GPACalculator' do
   # Pods for GPACalculator
   pod 'SnapKit', '~> 5.6.0'
   pod 'SwipeCellKit'
-
+  pod 'SwiftyShadow', '~> 1.7.0'
 end

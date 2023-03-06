@@ -39,7 +39,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         imageV.image = imageV.image?.withRenderingMode(.alwaysTemplate)
         
         viewControllers = [
-            generateViewController(vc: UINavigationController(rootViewController: UIViewController()), image: UIImage(named: "Off")?.tint(with: .clear), tag: 0),
+            generateViewController(vc: UINavigationController(rootViewController: DetailsViewController()), image: UIImage(named: "Off")?.tint(with: .clear), tag: 0),
             generateViewController(vc: UINavigationController(rootViewController: MainViewController()), image: UIImage(named: "Off")?.tint(with: .clear), tag: 1),
             generateViewController(vc: UINavigationController(rootViewController: SettingsViewController()), image: UIImage(named: "Off")?.tint(with: .clear), tag: 2),
         ]

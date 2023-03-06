@@ -34,7 +34,6 @@
 		104386F92991C97D002FAE8B /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104386F82991C97D002FAE8B /* Poppins-Bold.ttf */; };
 		104386FB2991DE0B002FAE8B /* AddGradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104386FA2991DE0B002FAE8B /* AddGradeViewController.swift */; };
 		104386FD2991DED7002FAE8B /* ChooseGradeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104386FC2991DED7002FAE8B /* ChooseGradeCollectionViewCell.swift */; };
-		104387002991E1BC002FAE8B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104386FF2991E1BC002FAE8B /* Helper.swift */; };
 		104387032992C25F002FAE8B /* GPACalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 104387012992C25F002FAE8B /* GPACalculator.xcdatamodeld */; };
 		1043870E2992C856002FAE8B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043870D2992C856002FAE8B /* DataManager.swift */; };
 		104387112992F37D002FAE8B /* Ext+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104387102992F37D002FAE8B /* Ext+UIViewController.swift */; };
@@ -45,6 +44,10 @@
 		1058B9D82995A74E003BF4D9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1058B9D72995A74E003BF4D9 /* SettingsViewController.swift */; };
 		1058B9DA2995A8C4003BF4D9 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1058B9D92995A8C4003BF4D9 /* SettingsTableViewCell.swift */; };
 		1058B9DC29963257003BF4D9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1058B9DB29963257003BF4D9 /* DetailsViewController.swift */; };
+		10675DA929B3A671001A64B0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10675DA829B3A671001A64B0 /* Helper.swift */; };
+		10DC6ECF29B5F65C005572E8 /* ScaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC6ECE29B5F65C005572E8 /* ScaleCollectionViewCell.swift */; };
+		10DC6ED129B63499005572E8 /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC6ED029B63499005572E8 /* CustomSegmentControl.swift */; };
+		10DC6ED329B65A32005572E8 /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC6ED229B65A32005572E8 /* Vibration.swift */; };
 		315B87358EEB2E10DE29879F /* Pods_GPACalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215042D61A53E259C9CE06E0 /* Pods_GPACalculator.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +82,6 @@
 		104386F82991C97D002FAE8B /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		104386FA2991DE0B002FAE8B /* AddGradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGradeViewController.swift; sourceTree = "<group>"; };
 		104386FC2991DED7002FAE8B /* ChooseGradeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGradeCollectionViewCell.swift; sourceTree = "<group>"; };
-		104386FF2991E1BC002FAE8B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		104387022992C25F002FAE8B /* GPACalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GPACalculator.xcdatamodel; sourceTree = "<group>"; };
 		1043870D2992C856002FAE8B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		104387102992F37D002FAE8B /* Ext+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIViewController.swift"; sourceTree = "<group>"; };
@@ -90,6 +92,10 @@
 		1058B9D72995A74E003BF4D9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1058B9D92995A8C4003BF4D9 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		1058B9DB29963257003BF4D9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		10675DA829B3A671001A64B0 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		10DC6ECE29B5F65C005572E8 /* ScaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleCollectionViewCell.swift; sourceTree = "<group>"; };
+		10DC6ED029B63499005572E8 /* CustomSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
+		10DC6ED229B65A32005572E8 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
 		215042D61A53E259C9CE06E0 /* Pods_GPACalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPACalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC65B9D2D9A3D8499DC3967 /* Pods-GPACalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPACalculator.debug.xcconfig"; path = "Target Support Files/Pods-GPACalculator/Pods-GPACalculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +192,7 @@
 				104386EF2991B366002FAE8B /* GradeTableViewCell.swift */,
 				104386FC2991DED7002FAE8B /* ChooseGradeCollectionViewCell.swift */,
 				1058B9D92995A8C4003BF4D9 /* SettingsTableViewCell.swift */,
+				10DC6ECE29B5F65C005572E8 /* ScaleCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -245,7 +252,9 @@
 		104386FE2991E1B3002FAE8B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				104386FF2991E1BC002FAE8B /* Helper.swift */,
+				10675DA829B3A671001A64B0 /* Helper.swift */,
+				10DC6ED029B63499005572E8 /* CustomSegmentControl.swift */,
+				10DC6ED229B65A32005572E8 /* Vibration.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -399,6 +408,7 @@
 				104386C0298C4C32002FAE8B /* MainImageView.swift in Sources */,
 				104387032992C25F002FAE8B /* GPACalculator.xcdatamodeld in Sources */,
 				104386A1298BF658002FAE8B /* AppDelegate.swift in Sources */,
+				10DC6ED129B63499005572E8 /* CustomSegmentControl.swift in Sources */,
 				104386EE29919DE3002FAE8B /* GradesViewController.swift in Sources */,
 				104387192992FFD7002FAE8B /* Ext+String.swift in Sources */,
 				104386EB29917C02002FAE8B /* SemesterTableViewCell.swift in Sources */,
@@ -406,10 +416,10 @@
 				104386F02991B366002FAE8B /* GradeTableViewCell.swift in Sources */,
 				104386FD2991DED7002FAE8B /* ChooseGradeCollectionViewCell.swift in Sources */,
 				104387152992F430002FAE8B /* GFAlertContainerView.swift in Sources */,
-				104387002991E1BC002FAE8B /* Helper.swift in Sources */,
 				104386E7299140E6002FAE8B /* FilterPresentationController.swift in Sources */,
 				104387132992F3BD002FAE8B /* GFAlertVC.swift in Sources */,
 				104386C2298C4C32002FAE8B /* MainLabel.swift in Sources */,
+				10675DA929B3A671001A64B0 /* Helper.swift in Sources */,
 				1058B9DA2995A8C4003BF4D9 /* SettingsTableViewCell.swift in Sources */,
 				104386F32991B5ED002FAE8B /* GradeView.swift in Sources */,
 				104387112992F37D002FAE8B /* Ext+UIViewController.swift in Sources */,
@@ -418,10 +428,12 @@
 				104386D2298EC39F002FAE8B /* Model.swift in Sources */,
 				104386E9299141D7002FAE8B /* AddSemesterViewController.swift in Sources */,
 				104386A3298BF658002FAE8B /* SceneDelegate.swift in Sources */,
+				10DC6ED329B65A32005572E8 /* Vibration.swift in Sources */,
 				104386FB2991DE0B002FAE8B /* AddGradeViewController.swift in Sources */,
 				1058B9D82995A74E003BF4D9 /* SettingsViewController.swift in Sources */,
 				104386CD298D6D79002FAE8B /* Ext+UINavigationContoller.swift in Sources */,
 				1043870E2992C856002FAE8B /* DataManager.swift in Sources */,
+				10DC6ECF29B5F65C005572E8 /* ScaleCollectionViewCell.swift in Sources */,
 				104386B7298BF89B002FAE8B /* MainTabBarController.swift in Sources */,
 				104386B5298BF69A002FAE8B /* MainViewController.swift in Sources */,
 				1058B9DC29963257003BF4D9 /* DetailsViewController.swift in Sources */,
