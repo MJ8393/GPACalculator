@@ -1,19 +1,23 @@
 //
-//  AddGradeViewController.swift
+//  FilterViewController.swift
 //  GPACalculator
 //
-//  Created by Mekhriddin Jumaev on 07/02/23.
+//  Created by Mekhriddin Jumaev on 06/02/23.
 //
 
 import UIKit
 
-class AddGradeViewController: UIViewController {
+var unSelectedSemesters = [SemesterModel]()
+
+class AddSemesterViewController: UIViewController {
     
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?
     var padding: CGFloat = 20
-    var onDoneBlock : ((Int) -> Void)?
-    var index = 0
+    var onDoneBlock : (([SemesterModel]) -> Void)?
+    var addUniverSubject : (([[SubjectModel]]) -> Void)?
+    var isUniversity: Bool = false
+    var selectedUniversity: Int = -1
     
     lazy var topView: UIView = {
         let view = UIView()
@@ -22,7 +26,7 @@ class AddGradeViewController: UIViewController {
         return view
     }()
     
-    lazy var semesterLabel = MainLabel(text: "Add grade", textColor: UIColor(named: "LabelColor")!, textAlignment: .center, font: UIFont(name: "Poppins-Regular", size: 16)!)
+    lazy var semesterLabel = MainLabel(text: "Add Semester", textColor: UIColor(named: "LabelColor")!, textAlignment: .center, font: UIFont(name: "Poppins-Regular", size: 16)!)
     
     lazy var lineView1: UIView = {
         let line = UIView()
@@ -38,25 +42,36 @@ class AddGradeViewController: UIViewController {
         return line
     }()
     
-    lazy var addButton = MainButton(title: "Apply")
+    lazy var addButton = MainButton(title: "Add")
     
-    var collectionView: UICollectionView!
+    let tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "BackgroundColor")
+        setData()
         setupViews()
         addSubviews()
         setConstraints()
     }
     
-    init(index: Int) {
+    init(isSubject: Bool) {
         super.init(nibName: nil, bundle: nil)
-        self.index = index
+        self.isUniversity = isSubject
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setData() {
+        unSelectedSemesters = []
+        let availableSemesters = semesters.map { $0.name }
+        for sem in allsemesters {
+            if !availableSemesters.contains(sem.name) {
+                unSelectedSemesters.append(sem)
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -70,17 +85,33 @@ class AddGradeViewController: UIViewController {
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
         
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
-        collectionView.register(ChooseGradeCollectionViewCell.self, forCellWithReuseIdentifier: ChooseGradeCollectionViewCell.resuseID)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.backgroundColor = .clear
-        collectionView.showsVerticalScrollIndicator = false
+        tableView.register(SemesterTableViewCell.self, forCellReuseIdentifier: SemesterTableViewCell.reuseID)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
         addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
     }
     
     @objc func addButtonTapped() {
-        onDoneBlock!(index)
+        if isUniversity {
+            addUniverSubject!(subjects[selectedUniversity]!)
+            dismiss(animated: true)
+            return
+        }
+        
+        var markSemesters = [SemesterModel]()
+        for semester in unSelectedSemesters {
+            guard let marked = semester.isMarked else { return }
+            if marked {
+                markSemesters.append(semester)
+                if let index = unSelectedSemesters.firstIndex(of: semester) {
+                    unSelectedSemesters.remove(at: index)
+                }
+            }
+        }
+        onDoneBlock!(markSemesters)
         dismiss(animated: true)
     }
     
@@ -110,26 +141,26 @@ class AddGradeViewController: UIViewController {
             let dragVelocity = sender.velocity(in: view)
             if dragVelocity.y >= 1300 {
                 // Velocity fast enough to dismiss the uiview
-                onDoneBlock!(0)
+                onDoneBlock!([])
                 self.dismiss(animated: true, completion: nil)
             } else {
                 // Set back to original position of the view controller
                 UIView.animate(withDuration: 0.3) {
-                    self.view.frame.origin = self.pointOrigin ?? CGPoint(x: 0, y: 400)
+                    self.view.frame.origin = self.pointOrigin ?? CGPoint(x: 0, y: 390)
                 }
             }
         }
     }
 }
 
-extension AddGradeViewController {
+extension AddSemesterViewController {
     private func addSubviews() {
         view.addSubview(topView)
         view.addSubview(semesterLabel)
         view.addSubview(lineView1)
         view.addSubview(lineView2)
         view.addSubview(addButton)
-        view.addSubview(collectionView)
+        view.addSubview(tableView)
     }
     
     private func setConstraints() {
@@ -166,7 +197,7 @@ extension AddGradeViewController {
             make.height.equalTo(60)
         }
         
-        collectionView.snp.makeConstraints { make in
+        tableView.snp.makeConstraints { make in
             make.leading.trailing.equalTo(view)
             make.top.equalTo(lineView1.snp.bottom)
             make.bottom.equalTo(lineView2.snp.top)
@@ -174,29 +205,39 @@ extension AddGradeViewController {
     }
 }
 
-extension AddGradeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChooseGradeCollectionViewCell.resuseID, for: indexPath) as? ChooseGradeCollectionViewCell else { return UICollectionViewCell() }
-        cell.cellIndex = index
-        cell.setData(grade: grades[indexPath.row], index: indexPath.row)
-        cell.gradeChosen = { [weak self] index in
-            let indexPath = IndexPath(item: self!.index, section: 0)
-            if self!.index == grades.count - 1 {
-                self?.index = index
-                return
-            }
-            if let cell = collectionView.cellForItem(at: indexPath) as? ChooseGradeCollectionViewCell {
-                if self?.index == index {
-                    return
+extension AddSemesterViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return isUniversity ? universities.count : unSelectedSemesters.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SemesterTableViewCell.reuseID, for: indexPath) as? SemesterTableViewCell else { return UITableViewCell() }
+        cell.selectionStyle = .none
+        if isUniversity {
+            cell.setUniversities(index: indexPath.row, isUniversity: true)
+            cell.univerTapped = { [weak self] index in
+                if self!.selectedUniversity != -1 {
+                    let indexPath = IndexPath(item: self!.selectedUniversity, section: 0)
+                    if let cell = tableView.cellForRow(at: indexPath) as? SemesterTableViewCell {
+                        cell.mainImageView.image = UIImage(named: "off")
+                        cell.isOn = false
+                    }
                 }
-                cell.mainImageView.image = UIImage(named: "off")
-                self?.index = index
+                if index != -1 {
+                    self?.selectedUniversity = index
+                } else {
+                    self?.selectedUniversity = -1
+                }
             }
+        } else {
+            cell.setData(semester: unSelectedSemesters[indexPath.row], index: indexPath.row)
         }
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return grades.count - 1
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
+    
 }

@@ -66,6 +66,10 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             print("Change grading system")
         case 1:
             print("Change language")
+            let filterVC = LanguageViewController()
+            filterVC.modalPresentationStyle = .custom
+            filterVC.transitioningDelegate = self
+            self.present(filterVC, animated: true, completion: nil)
         case 3:
             print("Contact dev")
         case 4:
@@ -76,17 +80,10 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-struct Setting {
-    let name: String
-    let icon: UIImage
-    let desc: String?
-    let hasSwitch: Bool
+extension SettingsViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        let filterPreCont = FilterPresentationController(presentedViewController: presented, presenting: presenting)
+        filterPreCont.setHeight(375)
+        return filterPreCont
+    }
 }
-
-let settings = [
-    Setting(name: "Grading system", icon: UIImage(systemName: "square.and.pencil")!, desc: "5.0(Uzbekistan)", hasSwitch: false),
-    Setting(name: "Language", icon: UIImage(systemName: "globe.europe.africa")!, desc: "English", hasSwitch: false),
-    Setting(name: "Dark mode", icon: UIImage(systemName: "cloud.moon")!, desc: nil, hasSwitch: true),
-    Setting(name: "Contact developer", icon: UIImage(systemName: "phone.arrow.up.right")!, desc: nil, hasSwitch: false),
-    Setting(name: "Share app", icon: UIImage(systemName: "arrowshape.turn.up.right")!, desc: nil, hasSwitch: false)
-]

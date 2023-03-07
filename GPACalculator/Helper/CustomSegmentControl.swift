@@ -21,16 +21,9 @@ class CustomSegmentControl: UIView {
             }
             gradingSystemTapped!(selectedIndex)
             Vibration.light.vibrate()
-            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(200), execute: { [weak self] in
-                guard let self = self else { return }
-                self.labels[oldValue].textColor = UIColor(named: "LabelColor2")
-                self.labels[self.selectedIndex].textColor = UIColor.white
-            })
         }
     }
-    
-    lazy var labels: [UILabel] = [uzLabel, krLabel, usLabel]
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         let testView = SwiftyInnerShadowView()
@@ -58,8 +51,6 @@ class CustomSegmentControl: UIView {
         krLabel.isUserInteractionEnabled = true
         let tap3 = UITapGestureRecognizer(target: self, action: #selector(self.krTapped(_:)))
         krLabel.addGestureRecognizer(tap3)
-        
-        self.labels[self.selectedIndex].textColor = UIColor.white
     }
 
     
@@ -80,11 +71,11 @@ class CustomSegmentControl: UIView {
         return view
     }()
     
-    lazy var usLabel = MainLabel(text: "US(4.0)", textColor: UIColor(named: "LabelColor2")!, textAlignment: .center, font: UIFont(name: "Poppins-Medium", size: 13)!)
+    lazy var usLabel = MainLabel(text: "US(4.0)", textColor: UIColor.init(hex: "424D59"), textAlignment: .center, font: UIFont(name: "Poppins-Medium", size: 13)!)
     
-    lazy var uzLabel = MainLabel(text: "UZ(5.0)", textColor: UIColor(named: "LabelColor2")!, textAlignment: .center, font: UIFont(name: "Poppins-Medium", size: 13)!)
+    lazy var uzLabel = MainLabel(text: "UZ(5.0)", textColor:  UIColor.init(hex: "424D59"), textAlignment: .center, font: UIFont(name: "Poppins-Medium", size: 13)!)
     
-    lazy var krLabel = MainLabel(text: "KR(4.5)", textColor: UIColor(named: "LabelColor2")!, textAlignment: .center, font: UIFont(name: "Poppins-Medium", size: 13)!)
+    lazy var krLabel = MainLabel(text: "KR(4.5)", textColor:  UIColor.init(hex: "424D59"), textAlignment: .center, font: UIFont(name: "Poppins-Medium", size: 13)!)
     
     @objc private func usTapped(_ sender: UITapGestureRecognizer? = nil)  {
         UIView.animate(withDuration: 0.3, animations: { [weak self] in

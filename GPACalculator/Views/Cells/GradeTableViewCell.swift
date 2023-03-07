@@ -48,6 +48,7 @@ class GradeTableViewCell: UITableViewCell {
     
     
     @objc func handleTap(sender: UITapGestureRecognizer) {
+        print("Tap", index)
         gradeTapped?(index)
     }
     

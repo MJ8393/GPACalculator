@@ -45,6 +45,8 @@
 		1058B9DA2995A8C4003BF4D9 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1058B9D92995A8C4003BF4D9 /* SettingsTableViewCell.swift */; };
 		1058B9DC29963257003BF4D9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1058B9DB29963257003BF4D9 /* DetailsViewController.swift */; };
 		10675DA929B3A671001A64B0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10675DA829B3A671001A64B0 /* Helper.swift */; };
+		10D2CABB29B7E0C500DF7E51 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2CABA29B7E0C500DF7E51 /* LanguageViewController.swift */; };
+		10D2CABD29B7E64700DF7E51 /* Ext+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2CABC29B7E64700DF7E51 /* Ext+UserDefaults.swift */; };
 		10DC6ECF29B5F65C005572E8 /* ScaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC6ECE29B5F65C005572E8 /* ScaleCollectionViewCell.swift */; };
 		10DC6ED129B63499005572E8 /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC6ED029B63499005572E8 /* CustomSegmentControl.swift */; };
 		10DC6ED329B65A32005572E8 /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC6ED229B65A32005572E8 /* Vibration.swift */; };
@@ -93,6 +95,8 @@
 		1058B9D92995A8C4003BF4D9 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		1058B9DB29963257003BF4D9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		10675DA829B3A671001A64B0 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		10D2CABA29B7E0C500DF7E51 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		10D2CABC29B7E64700DF7E51 /* Ext+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UserDefaults.swift"; sourceTree = "<group>"; };
 		10DC6ECE29B5F65C005572E8 /* ScaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleCollectionViewCell.swift; sourceTree = "<group>"; };
 		10DC6ED029B63499005572E8 /* CustomSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
 		10DC6ED229B65A32005572E8 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 				104386CC298D6D79002FAE8B /* Ext+UINavigationContoller.swift */,
 				104387102992F37D002FAE8B /* Ext+UIViewController.swift */,
 				104387182992FFD7002FAE8B /* Ext+String.swift */,
+				10D2CABC29B7E64700DF7E51 /* Ext+UserDefaults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,11 +231,10 @@
 		104386EC29918298002FAE8B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				10D2CAB929B7E09500DF7E51 /* Additional Screens */,
 				104386B6298BF89B002FAE8B /* MainTabBarController.swift */,
 				104386B4298BF69A002FAE8B /* MainViewController.swift */,
-				104386E8299141D7002FAE8B /* AddSemesterViewController.swift */,
 				104386ED29919DE2002FAE8B /* GradesViewController.swift */,
-				104386FA2991DE0B002FAE8B /* AddGradeViewController.swift */,
 				1058B9D72995A74E003BF4D9 /* SettingsViewController.swift */,
 				1058B9DB29963257003BF4D9 /* DetailsViewController.swift */,
 			);
@@ -265,6 +269,16 @@
 				1043870D2992C856002FAE8B /* DataManager.swift */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		10D2CAB929B7E09500DF7E51 /* Additional Screens */ = {
+			isa = PBXGroup;
+			children = (
+				104386E8299141D7002FAE8B /* AddSemesterViewController.swift */,
+				104386FA2991DE0B002FAE8B /* AddGradeViewController.swift */,
+				10D2CABA29B7E0C500DF7E51 /* LanguageViewController.swift */,
+			);
+			path = "Additional Screens";
 			sourceTree = "<group>";
 		};
 		7661383AB4F1184EED763643 /* Frameworks */ = {
@@ -410,6 +424,7 @@
 				104386A1298BF658002FAE8B /* AppDelegate.swift in Sources */,
 				10DC6ED129B63499005572E8 /* CustomSegmentControl.swift in Sources */,
 				104386EE29919DE3002FAE8B /* GradesViewController.swift in Sources */,
+				10D2CABD29B7E64700DF7E51 /* Ext+UserDefaults.swift in Sources */,
 				104387192992FFD7002FAE8B /* Ext+String.swift in Sources */,
 				104386EB29917C02002FAE8B /* SemesterTableViewCell.swift in Sources */,
 				104386CA298D6D33002FAE8B /* MainTableViewCell.swift in Sources */,
@@ -424,6 +439,7 @@
 				104386F32991B5ED002FAE8B /* GradeView.swift in Sources */,
 				104387112992F37D002FAE8B /* Ext+UIViewController.swift in Sources */,
 				104386F52991B61D002FAE8B /* CreditView.swift in Sources */,
+				10D2CABB29B7E0C500DF7E51 /* LanguageViewController.swift in Sources */,
 				104386C1298C4C32002FAE8B /* MainButton.swift in Sources */,
 				104386D2298EC39F002FAE8B /* Model.swift in Sources */,
 				104386E9299141D7002FAE8B /* AddSemesterViewController.swift in Sources */,

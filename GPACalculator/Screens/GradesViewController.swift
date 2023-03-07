@@ -204,6 +204,7 @@ extension GradesViewController: UITableViewDelegate, UITableViewDataSource {
             filterVC.transitioningDelegate = self
             self?.present(filterVC, animated: true, completion: nil)
             filterVC.onDoneBlock = { [weak self] index in
+                print(index)
                 cell.gradeView.gradeLabel.text = grades[index].name
                 cell.index = index
                 self?.subjects[indexPath.row].grade = grades[index].name

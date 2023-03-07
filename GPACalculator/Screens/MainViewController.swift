@@ -21,9 +21,11 @@ class MainViewController: UIViewController {
             if isEmpty {
                 imageView.isHidden = false
                 mainLabel.isHidden = false
+                tableView.isHidden = true
             } else {
                 imageView.isHidden = true
                 mainLabel.isHidden = true
+                tableView.isHidden = false
             }
         }
     }
@@ -34,8 +36,6 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        semesters = DataManager.shared.semesters()
-        isEmpty = semesters.isEmpty
         configureUI()
         configureTableView()
         addSubviews()
@@ -44,8 +44,45 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        print("xxx")
+        
+        semesters = DataManager.shared.semesters()
+        isEmpty = semesters.isEmpty
+        print(isEmpty)
+        
+        var subjects = [Subject]()
+        for semester in semesters {
+            print("YYY")
+            subjects += DataManager.shared.subjects(semester: semester)
+        }
+        let (credit, gpa) = calculateGPA(subjects: subjects)
+        cLabel2.text = String(credit)
+        gLabel2.text = String(format: "%.2f", gpa)
+
         tableView.reloadData()
     }
+
+    func calculateGPA(subjects: [Subject]) -> (Int, Double) {
+        var creditCount = 0
+        var sum: Double = 0.0
+        var gpa: Double = 0.0
+        for subject in subjects {
+            if subject.grade == "GPA" || subject.credits == 0 {
+                continue
+            }
+            creditCount += Int(subject.credits)
+            sum += Double(Int(subject.credits)) * subject.scale
+        }
+        if !(creditCount == 0) {
+            gpa = sum / Double(creditCount)
+        }
+
+        return (creditCount, gpa)
+    }
+    
+    let cLabel2 = MainLabel(text: "17", textColor: UIColor.init(hex: "F08F5F"), textAlignment: .left, font: UIFont(name: "Poppins-SemiBold", size: 18)!)
+    
+    let gLabel2 = MainLabel(text: "4.50", textColor: UIColor.init(hex: "F08F5F"), textAlignment: .left, font: UIFont(name: "Poppins-SemiBold", size: 18)!)
 
     
     @objc private func plusTapped() {
@@ -121,11 +158,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, SwipeT
         cell.accessoryType = .disclosureIndicator
         cell.delegate = self
         cell.setData(sem: semesters[indexPath.row])
-        if indexPath.row == semesters.count - 1 {
-            cell.lineView.backgroundColor = .white
-        } else {
-            cell.lineView.backgroundColor = UIColor.init(hex: "B8C2C0").withAlphaComponent(0.7)
-        }
+        cell.lineView.backgroundColor = UIColor.init(hex: "B8C2C0").withAlphaComponent(0.7)
         return cell
     }
     
@@ -139,7 +172,10 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, SwipeT
         guard orientation == .right else { return nil }
 
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-            // handle action by updating model with deletion
+            DataManager.shared.deleteSemester(semester: semesters[indexPath.row])
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+            semesters.remove(at: indexPath.row)
+            
         }
 
         // customize the action appearance
@@ -153,6 +189,41 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, SwipeT
         options.expansionStyle = .destructive
         options.transitionStyle = .border
         return options
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 150))
+        let cLabel1 = MainLabel(text: "Credits:", textColor: UIColor(named: "LabelColor2")!, textAlignment: .left, font: UIFont(name: "Poppins-SemiBold", size: 18)!)
+        footerView.addSubview(cLabel1)
+        cLabel1.snp.makeConstraints { make in
+            make.leading.equalTo(footerView).offset(40)
+            make.top.equalTo(footerView).offset(15)
+            make.width.equalTo(75)
+        }
+        
+        footerView.addSubview(cLabel2)
+        cLabel2.snp.makeConstraints { make in
+            make.leading.equalTo(cLabel1.snp.trailing).offset(5)
+            make.top.equalTo(footerView).offset(15)
+            make.width.equalTo(20)
+        }
+        
+        let gLabel1 = MainLabel(text: "GPA:", textColor: UIColor(named: "LabelColor2")!, textAlignment: .left, font: UIFont(name: "Poppins-SemiBold", size: 18)!)
+        footerView.addSubview(gLabel1)
+        gLabel1.snp.makeConstraints { make in
+            make.leading.equalTo(footerView.snp.centerX).offset(25)
+            make.top.equalTo(footerView).offset(15)
+            make.width.equalTo(45)
+        }
+        
+        footerView.addSubview(gLabel2)
+        gLabel2.snp.makeConstraints { make in
+            make.leading.equalTo(gLabel1.snp.trailing).offset(5)
+            make.top.equalTo(footerView).offset(15)
+            make.width.equalTo(45)
+        }
+        
+        return footerView
     }
 
 }
