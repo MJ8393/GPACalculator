@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  GPACalculator
 //
-//  Created by Mekhriddin Jumaev on 02/02/23.
+//  Created by Mekhriddin Jumaev.
 //
 
 import UIKit

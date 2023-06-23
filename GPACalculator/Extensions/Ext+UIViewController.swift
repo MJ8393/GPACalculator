@@ -2,7 +2,7 @@
 //  Ext+UIViewController.swift
 //  GPACalculator
 //
-//  Created by Mekhriddin Jumaev on 08/02/23.
+//  Created by Mekhriddin Jumaev.
 //
 
 import UIKit

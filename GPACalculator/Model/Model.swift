@@ -2,7 +2,7 @@
 //  Model.swift
 //  GPACalculator
 //
-//  Created by Mekhriddin Jumaev on 04/02/23.
+//  Created by Mekhriddin Jumaev.
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  File.swift
 //  Halol&Harom
 //
-//  Created by Mekhriddin Jumaev on 28/01/23.
+//  Created by Mekhriddin.
 //
 
 import UIKit

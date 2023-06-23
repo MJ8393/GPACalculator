@@ -2,7 +2,7 @@
 //  Ext+UserDefaults.swift
 //  GPACalculator
 //
-//  Created by Mekhriddin Jumaev on 08/03/23.
+//  Created by Mekhriddin Jumaev.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  AddGradeViewController.swift
 //  GPACalculator
 //
-//  Created by Mekhriddin Jumaev on 07/02/23.
+//  Created by Mekhriddin Jumaev.
 //
 
 import UIKit

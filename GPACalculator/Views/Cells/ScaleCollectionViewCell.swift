@@ -2,7 +2,7 @@
 //  ScaleCollectionViewCell.swift
 //  GPACalculator
 //
-//  Created by Mekhriddin Jumaev on 06/03/23.
+//  Created by Mekhriddin Jumaev.
 //
 
 import UIKit

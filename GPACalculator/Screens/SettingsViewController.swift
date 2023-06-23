@@ -2,7 +2,7 @@
 //  SettingsViewController.swift
 //  GPACalculator
 //
-//  Created by Mekhriddin Jumaev on 10/02/23.
+//  Created by Mekhriddin Jumaev.
 //
 
 import UIKit
@@ -28,7 +28,6 @@ class SettingsViewController: UIViewController {
         tableView.backgroundColor = .clear
         view.addSubview(tableView)
         tableView.frame = view.bounds
-        
     }
 }
 

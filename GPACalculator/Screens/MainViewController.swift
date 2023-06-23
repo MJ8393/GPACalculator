@@ -2,7 +2,7 @@
 //  MainViewController.swift
 //  GPACalculator
 //
-//  Created by Mekhriddin Jumaev on 02/02/23.
+//  Created by Mekhriddin Jumaev.
 //
 
 import UIKit
@@ -86,6 +86,7 @@ class MainViewController: UIViewController {
 
     
     @objc private func plusTapped() {
+        print("Helloooo")
         let filterVC = AddSemesterViewController(isSubject: false)
         filterVC.modalPresentationStyle = .custom
         filterVC.transitioningDelegate = self

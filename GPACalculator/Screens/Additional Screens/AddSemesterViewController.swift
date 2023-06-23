@@ -2,7 +2,7 @@
 //  FilterViewController.swift
 //  GPACalculator
 //
-//  Created by Mekhriddin Jumaev on 06/02/23.
+//  Created by Mekhriddin Jumaev.
 //
 
 import UIKit
@@ -120,17 +120,6 @@ class AddSemesterViewController: UIViewController {
         
         // Not allowing the user to drag the view upward
         guard translation.y >= 0 else {
-            if translation.y >= -20 {
-                view.frame.origin = CGPoint(x: 0, y: self.pointOrigin!.y + translation.y)
-            } else {
-                view.frame.origin = CGPoint(x: 0, y: self.pointOrigin!.y - 20)
-            }
-            
-            if sender.state == .ended {
-                UIView.animate(withDuration: 0.3) {
-                    self.view.frame.origin = self.pointOrigin ?? CGPoint(x: 0, y: 400)
-                }
-            }
             return
         }
         
@@ -139,7 +128,7 @@ class AddSemesterViewController: UIViewController {
         
         if sender.state == .ended {
             let dragVelocity = sender.velocity(in: view)
-            if dragVelocity.y >= 1300 {
+            if dragVelocity.y >= 1000 {
                 // Velocity fast enough to dismiss the uiview
                 onDoneBlock!([])
                 self.dismiss(animated: true, completion: nil)

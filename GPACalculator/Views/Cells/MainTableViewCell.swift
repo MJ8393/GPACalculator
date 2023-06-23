@@ -2,7 +2,7 @@
 //  MainTableViewCell.swift
 //  GPACalculator
 //
-//  Created by Mekhriddin Jumaev on 03/02/23.
+//  Created by Mekhriddin Jumaev.
 //
 
 import UIKit

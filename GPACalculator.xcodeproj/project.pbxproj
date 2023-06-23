@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101E01642A39B8C800B0AB27 /* PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E01632A39B8C800B0AB27 /* PresentedViewController.swift */; };
 		104386A1298BF658002FAE8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104386A0298BF658002FAE8B /* AppDelegate.swift */; };
 		104386A3298BF658002FAE8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104386A2298BF658002FAE8B /* SceneDelegate.swift */; };
 		104386A8298BF658002FAE8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104386A6298BF658002FAE8B /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		1058B9DA2995A8C4003BF4D9 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1058B9D92995A8C4003BF4D9 /* SettingsTableViewCell.swift */; };
 		1058B9DC29963257003BF4D9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1058B9DB29963257003BF4D9 /* DetailsViewController.swift */; };
 		10675DA929B3A671001A64B0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10675DA829B3A671001A64B0 /* Helper.swift */; };
+		109060D72A397D9F00FCD40A /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109060D62A397D9F00FCD40A /* NewViewController.swift */; };
 		10D2CABB29B7E0C500DF7E51 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2CABA29B7E0C500DF7E51 /* LanguageViewController.swift */; };
 		10D2CABD29B7E64700DF7E51 /* Ext+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2CABC29B7E64700DF7E51 /* Ext+UserDefaults.swift */; };
 		10DC6ECF29B5F65C005572E8 /* ScaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC6ECE29B5F65C005572E8 /* ScaleCollectionViewCell.swift */; };
@@ -55,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		0DA5C62A37B0D2100CB50F5D /* Pods-GPACalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPACalculator.release.xcconfig"; path = "Target Support Files/Pods-GPACalculator/Pods-GPACalculator.release.xcconfig"; sourceTree = "<group>"; };
+		101E01632A39B8C800B0AB27 /* PresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedViewController.swift; sourceTree = "<group>"; };
 		1043869D298BF658002FAE8B /* GPACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104386A0298BF658002FAE8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104386A2298BF658002FAE8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +98,7 @@
 		1058B9D92995A8C4003BF4D9 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		1058B9DB29963257003BF4D9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		10675DA829B3A671001A64B0 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		109060D62A397D9F00FCD40A /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		10D2CABA29B7E0C500DF7E51 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		10D2CABC29B7E64700DF7E51 /* Ext+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UserDefaults.swift"; sourceTree = "<group>"; };
 		10DC6ECE29B5F65C005572E8 /* ScaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 		1043869F298BF658002FAE8B /* GPACalculator */ = {
 			isa = PBXGroup;
 			children = (
+				109060C02A397D3F00FCD40A /* New */,
 				1043870C2992C831002FAE8B /* DataManager */,
 				104386FE2991E1B3002FAE8B /* Helper */,
 				104386EC29918298002FAE8B /* Screens */,
@@ -269,6 +274,15 @@
 				1043870D2992C856002FAE8B /* DataManager.swift */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		109060C02A397D3F00FCD40A /* New */ = {
+			isa = PBXGroup;
+			children = (
+				109060D62A397D9F00FCD40A /* NewViewController.swift */,
+				101E01632A39B8C800B0AB27 /* PresentedViewController.swift */,
+			);
+			path = New;
 			sourceTree = "<group>";
 		};
 		10D2CAB929B7E09500DF7E51 /* Additional Screens */ = {
@@ -425,6 +439,7 @@
 				10DC6ED129B63499005572E8 /* CustomSegmentControl.swift in Sources */,
 				104386EE29919DE3002FAE8B /* GradesViewController.swift in Sources */,
 				10D2CABD29B7E64700DF7E51 /* Ext+UserDefaults.swift in Sources */,
+				101E01642A39B8C800B0AB27 /* PresentedViewController.swift in Sources */,
 				104387192992FFD7002FAE8B /* Ext+String.swift in Sources */,
 				104386EB29917C02002FAE8B /* SemesterTableViewCell.swift in Sources */,
 				104386CA298D6D33002FAE8B /* MainTableViewCell.swift in Sources */,
@@ -451,6 +466,7 @@
 				1043870E2992C856002FAE8B /* DataManager.swift in Sources */,
 				10DC6ECF29B5F65C005572E8 /* ScaleCollectionViewCell.swift in Sources */,
 				104386B7298BF89B002FAE8B /* MainTabBarController.swift in Sources */,
+				109060D72A397D9F00FCD40A /* NewViewController.swift in Sources */,
 				104386B5298BF69A002FAE8B /* MainViewController.swift in Sources */,
 				1058B9DC29963257003BF4D9 /* DetailsViewController.swift in Sources */,
 			);

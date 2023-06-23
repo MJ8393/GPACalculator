@@ -2,7 +2,7 @@
 //  SemesterTableViewCell.swift
 //  GPACalculator
 //
-//  Created by Mekhriddin Jumaev on 06/02/23.
+//  Created by Mekhriddin Jumaev.
 //
 
 import UIKit
