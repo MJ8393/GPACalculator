@@ -42,10 +42,16 @@
 		104387152992F430002FAE8B /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104387142992F430002FAE8B /* GFAlertContainerView.swift */; };
 		104387172992FCB6002FAE8B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104387162992FCB6002FAE8B /* CustomTextField.swift */; };
 		104387192992FFD7002FAE8B /* Ext+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104387182992FFD7002FAE8B /* Ext+String.swift */; };
+		1044A0B22A4ACA5C00892E12 /* NewNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1044A0B12A4ACA5C00892E12 /* NewNewViewController.swift */; };
+		105418422A46233C00C65AB6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 105418442A46233C00C65AB6 /* Localizable.strings */; };
 		1058B9D82995A74E003BF4D9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1058B9D72995A74E003BF4D9 /* SettingsViewController.swift */; };
 		1058B9DA2995A8C4003BF4D9 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1058B9D92995A8C4003BF4D9 /* SettingsTableViewCell.swift */; };
 		1058B9DC29963257003BF4D9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1058B9DB29963257003BF4D9 /* DetailsViewController.swift */; };
 		10675DA929B3A671001A64B0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10675DA829B3A671001A64B0 /* Helper.swift */; };
+		1082E2812A6E312100CD7370 /* NewMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1082E2802A6E312100CD7370 /* NewMainViewController.swift */; };
+		1082E2842A6E31BD00CD7370 /* PaymentCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1082E2832A6E31BD00CD7370 /* PaymentCollectionCell.swift */; };
+		1082E2862A6E31DF00CD7370 /* PaymenyTypeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1082E2852A6E31DF00CD7370 /* PaymenyTypeCollectionCell.swift */; };
+		1082E2892A6E3DAE00CD7370 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1082E2882A6E3DAE00CD7370 /* SnapKit */; };
 		109060D72A397D9F00FCD40A /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109060D62A397D9F00FCD40A /* NewViewController.swift */; };
 		10D2CABB29B7E0C500DF7E51 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2CABA29B7E0C500DF7E51 /* LanguageViewController.swift */; };
 		10D2CABD29B7E64700DF7E51 /* Ext+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2CABC29B7E64700DF7E51 /* Ext+UserDefaults.swift */; };
@@ -94,10 +100,17 @@
 		104387142992F430002FAE8B /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		104387162992FCB6002FAE8B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		104387182992FFD7002FAE8B /* Ext+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+String.swift"; sourceTree = "<group>"; };
+		1044A0B12A4ACA5C00892E12 /* NewNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNewViewController.swift; sourceTree = "<group>"; };
+		105418432A46233C00C65AB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		105418452A4623F200C65AB6 /* uz */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uz; path = uz.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1058B9D72995A74E003BF4D9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1058B9D92995A8C4003BF4D9 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		1058B9DB29963257003BF4D9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		10675DA829B3A671001A64B0 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		1082E2802A6E312100CD7370 /* NewMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMainViewController.swift; sourceTree = "<group>"; };
+		1082E2832A6E31BD00CD7370 /* PaymentCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCollectionCell.swift; sourceTree = "<group>"; };
+		1082E2852A6E31DF00CD7370 /* PaymenyTypeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymenyTypeCollectionCell.swift; sourceTree = "<group>"; };
+		1082E2872A6E3C6000CD7370 /* SnapKit-develop */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SnapKit-develop"; path = "../../Downloads/SnapKit-develop"; sourceTree = "<group>"; };
 		109060D62A397D9F00FCD40A /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		10D2CABA29B7E0C500DF7E51 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		10D2CABC29B7E64700DF7E51 /* Ext+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UserDefaults.swift"; sourceTree = "<group>"; };
@@ -114,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				315B87358EEB2E10DE29879F /* Pods_GPACalculator.framework in Frameworks */,
+				1082E2892A6E3DAE00CD7370 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +137,7 @@
 		10438694298BF658002FAE8B = {
 			isa = PBXGroup;
 			children = (
+				1082E2872A6E3C6000CD7370 /* SnapKit-develop */,
 				1043869F298BF658002FAE8B /* GPACalculator */,
 				1043869E298BF658002FAE8B /* Products */,
 				CE66E5EB2BAEC262C45BE4C6 /* Pods */,
@@ -141,6 +156,8 @@
 		1043869F298BF658002FAE8B /* GPACalculator */ = {
 			isa = PBXGroup;
 			children = (
+				1044A0B12A4ACA5C00892E12 /* NewNewViewController.swift */,
+				1044A0B02A4ACA4D00892E12 /* New Group */,
 				109060C02A397D3F00FCD40A /* New */,
 				1043870C2992C831002FAE8B /* DataManager */,
 				104386FE2991E1B3002FAE8B /* Helper */,
@@ -157,6 +174,7 @@
 				104386AB298BF659002FAE8B /* LaunchScreen.storyboard */,
 				104386AE298BF659002FAE8B /* Info.plist */,
 				104387012992C25F002FAE8B /* GPACalculator.xcdatamodeld */,
+				105418442A46233C00C65AB6 /* Localizable.strings */,
 			);
 			path = GPACalculator;
 			sourceTree = "<group>";
@@ -276,6 +294,24 @@
 			path = DataManager;
 			sourceTree = "<group>";
 		};
+		1044A0B02A4ACA4D00892E12 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				1082E2822A6E317A00CD7370 /* view */,
+				1082E2802A6E312100CD7370 /* NewMainViewController.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		1082E2822A6E317A00CD7370 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1082E2832A6E31BD00CD7370 /* PaymentCollectionCell.swift */,
+				1082E2852A6E31DF00CD7370 /* PaymenyTypeCollectionCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		109060C02A397D3F00FCD40A /* New */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +366,9 @@
 			dependencies = (
 			);
 			name = GPACalculator;
+			packageProductDependencies = (
+				1082E2882A6E3DAE00CD7370 /* SnapKit */,
+			);
 			productName = GPACalculator;
 			productReference = 1043869D298BF658002FAE8B /* GPACalculator.app */;
 			productType = "com.apple.product-type.application";
@@ -356,6 +395,7 @@
 			knownRegions = (
 				en,
 				Base,
+				uz,
 			);
 			mainGroup = 10438694298BF658002FAE8B;
 			productRefGroup = 1043869E298BF658002FAE8B /* Products */;
@@ -376,6 +416,7 @@
 				104386BA298C48E7002FAE8B /* Poppins-SemiBold.ttf in Resources */,
 				104386AA298BF659002FAE8B /* Assets.xcassets in Resources */,
 				104386F92991C97D002FAE8B /* Poppins-Bold.ttf in Resources */,
+				105418422A46233C00C65AB6 /* Localizable.strings in Resources */,
 				104386CF298D7E77002FAE8B /* Poppins-Regular.ttf in Resources */,
 				104386F72991B81D002FAE8B /* Karla-Regular.ttf in Resources */,
 				104386A8298BF658002FAE8B /* Main.storyboard in Resources */,
@@ -443,15 +484,19 @@
 				104387192992FFD7002FAE8B /* Ext+String.swift in Sources */,
 				104386EB29917C02002FAE8B /* SemesterTableViewCell.swift in Sources */,
 				104386CA298D6D33002FAE8B /* MainTableViewCell.swift in Sources */,
+				1082E2862A6E31DF00CD7370 /* PaymenyTypeCollectionCell.swift in Sources */,
 				104386F02991B366002FAE8B /* GradeTableViewCell.swift in Sources */,
 				104386FD2991DED7002FAE8B /* ChooseGradeCollectionViewCell.swift in Sources */,
 				104387152992F430002FAE8B /* GFAlertContainerView.swift in Sources */,
 				104386E7299140E6002FAE8B /* FilterPresentationController.swift in Sources */,
+				1044A0B22A4ACA5C00892E12 /* NewNewViewController.swift in Sources */,
+				1082E2842A6E31BD00CD7370 /* PaymentCollectionCell.swift in Sources */,
 				104387132992F3BD002FAE8B /* GFAlertVC.swift in Sources */,
 				104386C2298C4C32002FAE8B /* MainLabel.swift in Sources */,
 				10675DA929B3A671001A64B0 /* Helper.swift in Sources */,
 				1058B9DA2995A8C4003BF4D9 /* SettingsTableViewCell.swift in Sources */,
 				104386F32991B5ED002FAE8B /* GradeView.swift in Sources */,
+				1082E2812A6E312100CD7370 /* NewMainViewController.swift in Sources */,
 				104387112992F37D002FAE8B /* Ext+UIViewController.swift in Sources */,
 				104386F52991B61D002FAE8B /* CreditView.swift in Sources */,
 				10D2CABB29B7E0C500DF7E51 /* LanguageViewController.swift in Sources */,
@@ -491,6 +536,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		105418442A46233C00C65AB6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				105418432A46233C00C65AB6 /* en */,
+				105418452A4623F200C65AB6 /* uz */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -498,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -558,6 +613,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -616,7 +672,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FZU84SDGV7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GPACalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -645,7 +701,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FZU84SDGV7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GPACalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -688,6 +744,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1082E2882A6E3DAE00CD7370 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		104387012992C25F002FAE8B /* GPACalculator.xcdatamodeld */ = {

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  GPACalculator
+
+  Created by Mekhriddin Jumaev on 23/06/23.
+  
+*/
+
+"welcome_screen_title" = "Baholash";
+"login_button" = "Baho qo'ying";
